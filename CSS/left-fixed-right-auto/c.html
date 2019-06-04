@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float + margin-left</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+
+        #left {
+            float: left;
+            background: green;
+            width: 200px;
+        }
+
+        #content {
+            background: red;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="left">left sidebar</div>
+        <div id="content">你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</div>
+    </div>
+
+    <div>
+        注意点：
+        <ul>
+            <li>1. 清除浮动</li>
+            <li>2. 右边要 margin-left</li>
+        </ul>
+    </div>
+</body>
+</html>
