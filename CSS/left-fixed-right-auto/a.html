@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>浮动布局</title>
+	<title>双 inline-block </title>
 	<style>
 		* {
 			margin: 0;
 			padding: 0;
 		}
 
+		#left, #content {
+			display: inline-block;
+			vertical-align: top;
+		}
+
 		#left {
-			float: left;
-			width:220px;
+			width: 200px;
 			background: green;
 		}
 
 		#content {
-			background-color: orange;
-			margin-left: 220px;
+			background: red;
+			width: calc(100% - 200px);
 		}
 
 	</style>
 </head>
 <body>
-	<div id="left">left sidebar</div>
-	<div id="content">说明：如果这里是英文的话，横向滚动条会出来，暂未解决</div>
+	<div class="container">
+		<div id="left">left sidebar</div
+		><div id="content">啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</div>
+	</div>
 </body>
 </html>
