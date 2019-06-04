@@ -2,39 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>浮动和负边距实现</title>
+    <title>双 float </title>
     <style>
         *{
             margin: 0;
             padding: 0;
         }
 
-        #left {
-            background-color: green;
+        .container:after {
+            content: ' ';
+            display: table;
+            clear: both;
+        }
+
+        #left, #content {
             float: left;
-            width: 220px;
-            margin-right: -100%;
+        }
+
+        #left {
+            background: green;
+            width: 200px;
         }
 
         #content {
-            float: left;
-            width: 100%;
-        }
-
-        #contentInner {
-            margin-left: 220px; /*==等于左边栏宽度值==*/
-            background-color: orange;
+            background: red;
+            width: calc(100% - 200px);
         }
     </style>
 </head>
 <body>
-    <div id="left">
-        Left Sidebar
-    </div>
-    <div id="content">
-        <div id="contentInner">
-            Main Content
+    <div class="container">
+        <div id="left">
+            Left Sidebar
         </div>
+        <div id="content">
+            你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+        </div>
+    </div>
+
+    <div>
+        缺点：
+        <ol>
+            <li>1. 要清浮动</li>
+            <li>2. 要计算右边的宽</li>
+        </ol>
     </div>
 </body>
 </html>
