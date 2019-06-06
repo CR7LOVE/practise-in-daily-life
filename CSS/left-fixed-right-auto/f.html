@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float + BFC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container:after {
+            content: ' ';
+            clear: both;
+            display: table;
+        }
+
+        #left {
+            width: 200px;
+            background: red;
+            float: left;
+        }
+
+        #content {
+            background: green;
+            overflow: hidden; /* bfc */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="left">left</div>
+        <div id="content">
+            好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊好啊
+        </div>
+    </div>
+</body>
+</html>
