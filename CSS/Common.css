@@ -1,8 +1,8 @@
-.fl{
+.left {
     float: left;
 }
 
-.fr {
+.right {
     float: right;
 }
 
@@ -16,4 +16,8 @@
 
 .top {
     vertical-align: top;
+}
+
+.bfc {
+    overflow: hidden;
 }
