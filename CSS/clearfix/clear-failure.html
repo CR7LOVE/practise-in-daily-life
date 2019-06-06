@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>失败的清除浮动</title>
     <style>
-        body, div {
+        * {
             margin: 0;
             padding: 0;
         }
 
-        .container:after {
-            display: table;
-            content: ' ';
-            clear: both;
-        }
-
         .left, .right {
             float: left;
+        }
+
+        .clearfix {
+            clear: both;
         }
     </style>
 </head>
@@ -24,6 +22,8 @@
     <div class="container">
         <div class="left">left</div>
         <div class="right">right</div>
+        <a class="clearfix"></a>
+        <!--将 i 换成 span, a 都不能清除浮动，但是如果将它们的 display 的值改为 inline-block 或者 block 就可以了-->
     </div>
 </body>
 </html>

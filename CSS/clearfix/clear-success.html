@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成功的清除浮动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left, .right {
+            float: left;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">left</div>
+        <div class="right">right</div>
+        <div class="clearfix"></div>
+        <!--如果将 div 的 display 改为 inline，清除会失败-->
+    </div>
+</body>
+</html>
